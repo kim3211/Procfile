@@ -1,0 +1,142 @@
+# ═══════════════════════════════════════════════════════
+#  TRADINGVIEW ALERT JSON TEMPLATES
+#  Copy-paste these in TradingView Alert → Message box
+# ═══════════════════════════════════════════════════════
+
+# ─── WEBHOOK URL (Alert settings mein daalo) ───────────
+# https://your-server.up.railway.app/webhook?secret=my_trading_bot_2026
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  BTC / USDT
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "LONG",
+  "pair": "BTC/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "15m",
+  "strategy": "ICT Kill Zone",
+  "entry": "{{close}}",
+  "sl": "{{low}}",
+  "tp1": "{{high}}",
+  "tp2": "",
+  "rr": "2:1",
+  "note": "London session | OB retest"
+}
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  ETH / USDT
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "SHORT",
+  "pair": "ETH/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "1H",
+  "strategy": "MTF Structure",
+  "entry": "{{close}}",
+  "sl": "{{high}}",
+  "tp1": "{{low}}",
+  "tp2": "",
+  "rr": "3:1",
+  "note": "4H bearish BOS | NY session"
+}
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  SOL / USDT
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "LONG",
+  "pair": "SOL/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "15m",
+  "strategy": "FVG + Kill Zone",
+  "entry": "{{close}}",
+  "sl": "{{low}}",
+  "tp1": "{{high}}",
+  "tp2": "",
+  "rr": "2.5:1",
+  "note": "Asia session FVG filled"
+}
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  1000PEPE / USDT
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "LONG",
+  "pair": "1000PEPE/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "5m",
+  "strategy": "AMD Cycle",
+  "score": "7/8",
+  "entry": "{{close}}",
+  "sl": "{{low}}",
+  "tp1": "{{high}}",
+  "tp2": "",
+  "rr": "2:1",
+  "note": "Kill Zone scalp"
+}
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  DOGE / USDT
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "SHORT",
+  "pair": "DOGE/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "15m",
+  "strategy": "BOS + OB",
+  "entry": "{{close}}",
+  "sl": "{{high}}",
+  "tp1": "{{low}}",
+  "tp2": "",
+  "rr": "2:1",
+  "note": "Bearish structure"
+}
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  XRP / USDT
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "LONG",
+  "pair": "XRP/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "1H",
+  "strategy": "Support Retest",
+  "entry": "{{close}}",
+  "sl": "{{low}}",
+  "tp1": "{{high}}",
+  "tp2": "",
+  "rr": "3:1",
+  "note": "Weekly support zone"
+}
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#  CLOSE / EXIT SIGNAL (any coin)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{
+  "signal": "CLOSE",
+  "pair": "ETH/USDT",
+  "exchange": "Binance Futures",
+  "timeframe": "15m",
+  "entry": "{{close}}",
+  "sl": "-",
+  "tp1": "-",
+  "note": "Exit signal — structure invalidated"
+}
+
+
+# ═══════════════════════════════════════════════════════
+#  NOTES:
+#  - {{close}} = current candle close price (TradingView variable)
+#  - {{high}}  = candle high
+#  - {{low}}   = candle low
+#  - entry/sl/tp manually set karna better hai
+#    (TradingView variables approximate hote hain)
+#  - score field optional hai — sirf scoring system wale use karein
+# ═══════════════════════════════════════════════════════
